@@ -1,6 +1,10 @@
 package tui
 
-import "github.com/rivo/tview"
+import (
+	"github.com/greycodee/v2ex-terminal-cli/api"
+	"github.com/rivo/tview"
+	"github.com/charmbracelet/glamour"
+)
 
 func (t *TUI) topicList() {
 	tp := tview.NewList()
@@ -10,5 +14,13 @@ func (t *TUI) topicList() {
 }
 
 func (t *TUI) handleSelect(index int, mainText string, secondaryText string, shortcut rune)  {
-	t.content.SetText(mainText)
+	topicInfo,err := api.GetTopicInfo(secondaryText)
+	if err != nil {
+		return
+	}
+	md,err := glamour.Render(topicInfo.Content,"dark")
+	if err != nil {
+		return
+	}
+	t.content.SetText(md)
 }

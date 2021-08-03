@@ -2,20 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="526d5e03-c8cc-4164-8ede-7f396764f170" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/api/topic.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tui/data.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tui/tab.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tui/topic_list.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/urls/urls.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/v2ex-terminal-cli.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/topic_info.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/topic.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/tab.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tui/tui.go" beforeDir="false" afterPath="$PROJECT_DIR$/tui/tui.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tui/tab.go" beforeDir="false" afterPath="$PROJECT_DIR$/tui/tab.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tui/topic_list.go" beforeDir="false" afterPath="$PROJECT_DIR$/tui/topic_list.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/urls/urls.go" beforeDir="false" afterPath="$PROJECT_DIR$/urls/urls.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +24,7 @@
       </list>
     </option>
   </component>
+  <component name="GOROOT" url="file://$PROJECT_DIR$/../../Go/sdk/1.15.7" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -53,6 +49,7 @@
     <property name="configurable..is.expanded" value="true" />
     <property name="configurable.GoLibrariesConfigurable.is.expanded" value="true" />
     <property name="go.import.settings.migrated" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="configurable.group.language" />
   </component>
@@ -68,18 +65,18 @@
       <module name="v2ex-terminal-cli" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/main.go" />
       <package value="github.com/greycodee/v2ex-terminal-cli" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/main.go" />
       <method v="2" />
     </configuration>
     <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="v2ex-terminal-cli" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/main.go" />
       <package value="github.com/greycodee/v2ex-terminal-cli" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/main.go" />
       <method v="2" />
     </configuration>
     <recent_temporary>
@@ -103,6 +100,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>

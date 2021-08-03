@@ -2,7 +2,9 @@ package urls
 
 const baseWebUrl = "https://v2ex.com/"
 
-type TabUrl string
+const baseApiUrl = "https://www.v2ex.com/api/"
+
+type ApiUrl string
 
 
 var TabLinkList = []map[string]string{
@@ -49,9 +51,6 @@ var TabLinkList = []map[string]string{
 }
 
 
-
-
-
 // tab
 const (
 	// TabTech 技术
@@ -85,6 +84,7 @@ const (
 	TabAll = baseWebUrl +"?tab=all"
 )
 
-type url struct {
 
-}
+const (
+	TopicShow = baseApiUrl+"topics/show.json"
+)

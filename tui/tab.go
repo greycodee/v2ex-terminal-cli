@@ -12,13 +12,13 @@ func (t *TUI) dropDown() *tview.DropDown {
 		SetLabel("选择Tab: ").
 		SetOptions(TabList, func(text string, index int) {
 			//t.Topic.SetText(urls.TabLinkList[index]["link"])
-			list, err := api.TabTopicList(urls.TabUrl(urls.TabLinkList[index]["link"]))
+			list, err := api.TabTopicList(urls.ApiUrl(urls.TabLinkList[index]["link"]))
 			if err != nil {
 				return
 			}
 			t.Topic.Clear()
 			for _,v := range list {
-				t.Topic.AddItem(v.Title,v.Member,0, nil).ShowSecondaryText(false)
+				t.Topic.AddItem(v.Title,v.Id,0, nil).ShowSecondaryText(false)
 			}
 
 		})

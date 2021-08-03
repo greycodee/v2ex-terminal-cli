@@ -6,12 +6,11 @@ import (
 	"io"
 	"log"
 	"net/http"
-	"strconv"
 	"strings"
 )
 
 type Topic struct {
-	Id              int32 	`json:"id" comment:"主题ID"`
+	Id              string 	`json:"id" comment:"主题ID"`
 	Member          string `json:"member_name" comment:"会员名"`
 	MemberAvatar    string `json:"member_avatar" comment:"会员头像"`
 	Title           string `json:"title" comment:"标题"`
@@ -22,7 +21,7 @@ type Topic struct {
 	ReplyCount      string `json:"reply_count" comment:"回复总数"`
 }
 
-func TabTopicList(url urls.TabUrl) (topics []Topic, err error) {
+func TabTopicList(url urls.ApiUrl) (topics []Topic, err error) {
 	res, err := http.Get(string(url))
 	if err != nil {
 		return
@@ -46,8 +45,7 @@ func TabTopicList(url urls.TabUrl) (topics []Topic, err error) {
 			// 主题ID
 			topicLink,_ := tr.Find(".topic-link").Attr("href")
 			topicId := strings.Split(topicLink,"#")[0][3:]
-			tmpId,_:=strconv.ParseInt(topicId,10,32)
-			topic.Id = int32(tmpId)
+			topic.Id = topicId
 
 			// 头像
 			avatar,_ := tr.Find(".avatar").Attr("src")
@@ -90,8 +88,3 @@ func TabTopicList(url urls.TabUrl) (topics []Topic, err error) {
 	return
 }
 
-
-
-func (t *Topic) NodeTopicList()  {
-	
-}
